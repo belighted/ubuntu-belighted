@@ -33,7 +33,7 @@ This will :
 Before starting anything else, you need to set your environment variables. run the following commands :
 
 ```bash
-cd ~/.scripts/linux-install/pop!_os
+cd ~/.scripts/ubuntu-belighted
 nano .env
 ```
 
@@ -60,9 +60,10 @@ Running this script will :
 * Configure your Git credentials;
 * Create an SSH key pair;
 * Install zsh;
-* Install and configure Oh My Zsh;
+* Install and configure Oh My Zsh (plugins, aliases, theme);
 * Configure aliases for Zsh;
 * Install GNOME extensions;
+* Install nodejs, ruby and python through ASDF;
 
 docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
@@ -101,12 +102,13 @@ After the script finished executing, you will need to reboot. Do it before conti
 Once you logged back in, open a terminal. You will be prompted to configure the powerlevel10k oh-my-zsh theme.
 
 **NOTE: during the execution of the ./install.sh script, the MesloLGS NF fonts were installed on your system. powerlevel10k recommends using them.**
+
 **on the gnome terminal, open the settings and select your profile. Under the "Text" section, check the "Custom font" box and select the "MesloLGS NF" font from the drop down list**
 
 There is one more script to execute :
 
 ```bash
-cd ~/.scripts/linux-install/pop!_os
+cd ~/.scripts/ubuntu-belighted
 ./post_install.sh
 ```
 
