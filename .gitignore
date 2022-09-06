@@ -1,0 +1,7 @@
+.env
+.deb
+.tar
+.extensions
+brscan*.deb
+dcp9270cdn*.deb
+uninstaller_*
