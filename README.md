@@ -62,8 +62,6 @@ Running this script will :
 * Install GNOME extensions;
 * Install nodejs, ruby and python through ASDF;
 
-docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
 |   Package     |   description     |
 |   -------     |   -----------     |
 |   curl        |   command line tool for transferring data with URL syntax      |
@@ -82,10 +80,20 @@ docker-ce docker-ce-cli containerd.io docker-compose-plugin
 |   libreadline6-dev    |    GNU readline and history libraries, development files    |
 |   zlib1g-dev  |	compression library - runtime     |
 |   libncurses5-dev |    shared libraries for terminal handling (legacy version)    |
-|   libffi-dev  |   Foreign Function Interface library (development files)     |
+|   libedit-dev |   BSD editline and history libraries (development files)     |
+|   libsqlite3-dev  |   C library that implements an SQL database engine    |
+|   libbz2-dev  |   high-quality block-sorting file compressor library - development    |
+|   libffi-dev  |   Foreign Function Interface library (development files)  |
 |   libgdbm6    |   GNU dbm database routines (runtime version)      |
-|   libd-dev    |   Berkeley Database Libraries     |
+|   libgdbm-dev |   GNU dbm database routines (development files)    |
+|   libdb-dev   |   Berkeley Database Libraries (development)        |
 |   uuid-dev    |   Universally Unique ID library - headers and static libraries      |
+|   tmux        |   terminal multiplexer    |
+|   llvm        |   Low-Level Virtual Machine (LLVM)    |
+|   xz-utils    |   XZ-format compression utilities     |
+|   libxmlsec1-dev  |   	Development files for the XML security library      |
+|   liblzma-dev |   	XZ-format compression library - development files       |
+|   libcurl4-openssl    |   development files and documentation for libcurl (OpenSSL flavour)   |
 |   libfuse2    |   Filesystem in Userspace (library)     |
 |   Visual Studio Code  |   VS Code is a source-code editor made by Microsoft   |
 |   docker (& friends)  |   Pack, ship and run any application as a lightweight container   |
