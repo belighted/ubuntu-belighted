@@ -29,3 +29,4 @@ xz-utils
 tk-dev
 libxmlsec1-dev
 liblzma-dev
+libcurl4-openssl

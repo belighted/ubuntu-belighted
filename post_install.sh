@@ -27,10 +27,12 @@ asdf global nodejs latest
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf install ruby latest
 asdf global ruby latest
-gem install rails
 asdf plugin-add python
 asdf install python latest
 asdf global python latest
+asdf plugin-add postgres
+asdf install postgres latest
+asdf global postgres latest
 
 # FILE CLEAN UP
 rm -rf .deb .tar .extensions
