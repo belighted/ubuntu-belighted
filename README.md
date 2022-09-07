@@ -111,4 +111,18 @@ cd ~/.scripts/ubuntu-belighted
 
 This script enables the gnome shell extensions that were configured during installation. It also installs nodejs, ruby, rails and python using asdf.
 
-Now you're done !
+Now, you can start using your computer.
+
+**NOTE: this script does not configure git and does not generate any ssh key**
+
+**you could do it easily with a few commands (for example) :**
+
+```bash
+# GIT
+git config --global user.name $GIT_USER_NAME
+git config --global user.email $GIT_USER_EMAIL
+git config --global core.editor $GIT_EDITOR
+
+# SSH
+ssh-keygen -q -t rsa -b 4096 -C "$SSH_EMAIL"
+```
