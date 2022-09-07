@@ -22,15 +22,15 @@ gnome-extensions enable $VITALS
 
 # ASDF
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs 16.17.0
-asdf global nodejs 16.17.0
+asdf install nodejs latest
+asdf global nodejs latest
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf install ruby 3.1.2
-asdf global ruby 3.1.2
+asdf install ruby latest
+asdf global ruby latest
 gem install rails
 asdf plugin-add python
-asdf install python 3.10.6
-asdf global python 3.10.6
+asdf install python latest
+asdf global python latest
 
 # FILE CLEAN UP
 rm -rf .deb .tar .extensions
