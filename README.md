@@ -134,3 +134,7 @@ git config --global core.editor $GIT_EDITOR
 # SSH
 ssh-keygen -q -t rsa -b 4096 -C "$SSH_EMAIL"
 ```
+
+## Change log
+
+Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
