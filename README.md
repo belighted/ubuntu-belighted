@@ -8,36 +8,33 @@ This folder contains installation scripts for setting up an Ubuntu 22.04 Linux m
 
 ## Before Starting
 
-* Download the Ubuntu 22.04 ISO from [Ubuntu's website](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64).
-* Flash the downloaded ISO to a USB stick. There are multiple ways of doing that. I like to use [balenaEtcher](https://www.balena.io/etcher/).
-* Boot your computer from the flashed USB stick and follow Ubuntu's installer.
-* Once this is all done, reboot and log in to your new operating system.
-* That's it! You can now follow the instruction in the [Getting Started](#Getting-Started) section.
+* Download the Ubuntu 22.04 ISO from [Ubuntu's website](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64);
+* Flash the downloaded ISO to a USB stick. There are multiple ways of doing that. I like to use [balenaEtcher](https://www.balena.io/etcher/);
+* Boot your computer from the flashed USB stick and follow Ubuntu's installer;
+* Once this is all done, reboot and log in to your new operating system;
+* That's it! You can now follow the instruction in the [Getting Started](#Getting-Started) section;
 
 ## Getting Started
 
-Open a terminal and run the following commands :
+Open a terminal and run the following command :
 
 ```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install git
-git clone https://github.com/belighted/ubuntu-belighted.git ~/.scripts/ubuntu-belighted
+wget https://github.com/belighted/ubuntu-belighted/raw/main/install.sh -O /home/$(whoami)/Downloads/install.sh && chmod +x /home/$(whoami)/Downloads/install.sh && bash /home/$(whoami)/Downloads/install.sh
 ```
 
 This will :
-* update your system,
-* install the git package on your computer,
-* clone this repository to the ~/.scripts folder on your computer.
+* update your system;
+* install the git package on your computer;
+* clone this repository to the ~/.scripts folder on your computer;
 
-Before starting anything else, you need to set your environment variables. run the following commands :
+Before starting anything else, you need to set your environment variables. Run the following commands :
 
 ```bash
 cd ~/.scripts/ubuntu-belighted
 nano .env
 ```
 
-This will open [nano](https://www.nano-editor.org/) within your terminal. paste the following lines and make sure to edit the variable values to match your own credential and preferences !
+This will open [nano](https://www.nano-editor.org/) within your terminal. Paste the following lines and make sure to edit the variable values to match your own credential and preferences !
 
 ```bash
 GIT_USER_NAME="toto"

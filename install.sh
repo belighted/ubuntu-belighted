@@ -1,16 +1,8 @@
 #!/bin/bash
-# UPDATE SYSTEM
-sudo apt update -qq
-sudo apt upgrade -y -qq
-
-# INSTALL ESSENTIAL PACKAGES
-./install_packages.sh
-
-# GIT & SSH CONFIGURATION
-./config_git_ssh.sh
-
-# INSTALL ZSH & CONFIGURE OH MY ZSH
-./install_zsh_setup_ohmyzsh.sh
-
-# DESKTOP CUSTOMIZATION
-./desktop_customization.sh
+sudo apt update -qq && sudo apt upgrade -y -qq
+sudo apt install git -y -qq
+mkdir ~/.scripts
+git clone https://github.com/belighted/ubuntu-belighted.git ~/.scripts/ubuntu-belighted
+cd ~/.scripts/ubuntu-belighted
+./main.sh
+rm -f ~/Downloads/install.sh

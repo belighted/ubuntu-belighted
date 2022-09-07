@@ -33,7 +33,7 @@ asdf install python 3.10.6
 asdf global python 3.10.6
 
 # FILE CLEAN UP
-rm -r .deb .tar .extensions
-sudo rm brscan*.deb
-sudo rm dcp9270cdn*.deb
-sudo rm uninstaller_*
+rm -rf .deb .tar .extensions
+sudo rm -f brscan*.deb
+sudo rm -f dcp9270cdn*.deb
+sudo rm -f uninstaller_*
