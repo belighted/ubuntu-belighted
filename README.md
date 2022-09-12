@@ -107,6 +107,10 @@ git config --global core.editor $GIT_EDITOR
 ssh-keygen -q -t rsa -b 4096 -C "$SSH_EMAIL"
 ```
 
+## Notes
+
+The commit format is based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
 ## Change log
 
 Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
