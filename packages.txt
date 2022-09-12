@@ -11,9 +11,12 @@ autoconf
 bison
 libssl-dev
 libyaml-dev
-libreadline6-dev
+libreadline-dev
 zlib1g-dev
 libncurses5-dev
+libedit-dev
+libsqlite3-dev
+libbz2-dev
 libffi-dev
 libgdbm6
 libgdbm-dev
@@ -21,3 +24,9 @@ libdb-dev
 uuid-dev
 tmux
 libfuse2
+llvm
+xz-utils
+tk-dev
+libxmlsec1-dev
+liblzma-dev
+libcurl4-openssl-dev

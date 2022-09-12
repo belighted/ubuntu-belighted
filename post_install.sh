@@ -22,18 +22,21 @@ gnome-extensions enable $VITALS
 
 # ASDF
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs 16.17.0
-asdf global nodejs 16.17.0
+asdf install nodejs latest
+asdf global nodejs latest
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf install ruby 3.1.2
-asdf global ruby 3.1.2
-gem install rails
+asdf install ruby latest
+asdf global ruby latest
 asdf plugin-add python
-asdf install python 3.10.6
-asdf global python 3.10.6
+asdf install python latest
+asdf global python latest
+asdf plugin-add postgres
+asdf install postgres latest
+asdf global postgres latest
 
 # FILE CLEAN UP
-rm -r .deb .tar .extensions
-sudo rm brscan*.deb
-sudo rm dcp9270cdn*.deb
-sudo rm uninstaller_*
+rm -rf .deb .tar .extensions
+sudo rm -f brscan*.deb
+sudo rm -f dcp9270cdn*.deb
+sudo rm -f uninstaller_*
+rm -rf ~/.scripts/ubuntu-belighted

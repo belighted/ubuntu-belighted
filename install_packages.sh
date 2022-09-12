@@ -7,6 +7,7 @@ SLACK_DEB="https://downloads.slack-edge.com/releases/linux/4.28.171/prod/x64/sla
 # INSTALL ESSENTIAL APPLICATIONS
 ## PACKAGES
 sudo xargs -a packages.txt -r apt install -y -qq # install the packages listed on the packages.txt file
+sudo apt install linux-headers-$(uname -r) -y -qq
 ## VSCODE
 mkdir ./.deb
 wget $CODE_DEB -O ./.deb/code.deb
