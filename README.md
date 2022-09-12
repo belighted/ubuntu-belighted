@@ -22,45 +22,17 @@ Open a terminal and run the following command:
 wget https://github.com/belighted/ubuntu-belighted/raw/main/install.sh -O /home/$(whoami)/Downloads/install.sh && chmod +x /home/$(whoami)/Downloads/install.sh && bash /home/$(whoami)/Downloads/install.sh
 ```
 
-This will :
+This will:
 * update your system;
 * install the git package on your computer;
 * clone this repository to the ~/.scripts folder on your computer;
-
-Before starting anything else, you need to set your environment variables. Run the following commands:
-
-```bash
-cd ~/.scripts/ubuntu-belighted
-nano .env
-```
-
-This will open [nano](https://www.nano-editor.org/) within your terminal. Paste the following lines and make sure to edit the variable values to match your own credential and preferences!
-
-```bash
-GIT_USER_NAME="toto"
-GIT_USER_EMAIL="toto@titi.org"
-GIT_EDITOR="nano"
-SSH_EMAIL="toto@titi.org"
-```
-
-These variables will be used during the script execution to set the Git gloabl configuration.
-
-Once the instructions have finished running, run the following command to run the install script :
-
-```bash
-./install.sh
-```
-
-Running this script will :
-
-* Install a few packages (see table below);
-* Configure your Git credentials;
-* Create an SSH key pair;
-* Install zsh;
-* Install and configure Oh My Zsh (plugins, aliases, theme);
-* Configure aliases for Zsh;
-* Install GNOME extensions;
-* Install nodejs, ruby and python through ASDF;
+* run the main.sh script:
+- - Install a few packages (see table below);
+- - Install zsh;
+- - Install and configure Oh My Zsh (plugins, aliases, theme);
+- - Configure aliases for Zsh;
+- - Install GNOME extensions;
+- - Install nodejs, ruby, python and postgres through ASDF;
 
 |   Package     |   description     |
 |   -------     |   -----------     |
