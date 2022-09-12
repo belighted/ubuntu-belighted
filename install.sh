@@ -6,3 +6,4 @@ git clone https://github.com/belighted/ubuntu-belighted.git ~/.scripts/ubuntu-be
 cd ~/.scripts/ubuntu-belighted
 ./main.sh
 rm -f ~/Downloads/install.sh
+rm -rf ~/.scripts/ubuntu-belighted
