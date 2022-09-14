@@ -8,13 +8,15 @@ This folder contains installation scripts for setting up an Ubuntu 22.04 Linux m
 
 ## Before Starting
 
-* Download the Ubuntu 22.04 ISO from [Ubuntu's website](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64);
-* Flash the downloaded ISO to a USB stick. There are multiple ways of doing that. For example, you could use [balenaEtcher](https://www.balena.io/etcher/);
-* Boot your computer from the flashed USB stick and follow Ubuntu's installer;
-* Once this is all done, reboot and log in to your new operating system;
-* That's it! You can now follow the instruction in the [Getting Started](#Getting-Started) section;
+* download the Ubuntu 22.04 ISO from [Ubuntu's website](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64);
+* flash the downloaded ISO to a USB stick. There are multiple ways of doing that. For example, you could use [balenaEtcher](https://www.balena.io/etcher/);
+* boot your computer from the flashed USB stick and follow Ubuntu's installer;
+* once this is all done, reboot and log in to your new operating system;
+* that's it! You can now follow the instructions in the [Getting Started](#Getting-Started) section;
 
 ## Getting Started
+
+**If your goal is to dual-boot Linux (Ubuntu 22.04) and Windows (11), refer to the [Dual-Boot - Ubuntu 22.04 with Windows 11](#Dual-Boot-Ubuntu-22.04-with-Windows-11) section.**
 
 Open a terminal and run the following command:
 
@@ -27,12 +29,13 @@ This will:
 * install the git package on your computer;
 * clone this repository to the ~/.scripts folder on your computer;
 * run the main.sh script:
-- - Install a few packages (see table below);
-- - Install zsh;
-- - Install and configure Oh My Zsh (plugins, aliases, theme);
-- - Configure aliases for Zsh;
-- - Install GNOME extensions;
-- - Install nodejs, ruby, python and postgres through ASDF;
+- - install a few packages (see table below);
+- - configure the office printer (run the configuration script, you have to set inputs manually. Refer to the [Printer](https://www.notion.so/belighted/Printer-4953222ec7d54ddcb8617b4af0ec8915) Notion Page); 
+- - install zsh;
+- - install and configure Oh My Zsh (plugins, aliases, theme);
+- - configure aliases for Zsh;
+- - install GNOME extensions;
+- - install nodejs, ruby, python and postgres through ASDF;
 
 |   Package     |   description     |
 |   -------     |   -----------     |
@@ -105,6 +108,38 @@ git config --global core.editor $GIT_EDITOR
 # SSH
 ssh-keygen -q -t rsa -b 4096 -C "$SSH_EMAIL"
 ```
+
+## Dual-Boot - Ubuntu 22.04 with Windows 11
+
+### Requirement
+
+* A computer running Windows 11;
+
+### Preparing Windows for Ubuntu
+
+Open the Disk Management utility by pressing **[WinKey]+[R]** and typing *diskmgmt.msc* in the dialog box. Hit **[Enter]** to continue.
+
+Within the Disk Management window, shrink your Windows Volume to create an empty partition for Ubuntu 22.04:
+* right click on the volume, select *Shrink Volume...*;
+* *enter the amount of space to shrink in MB*. The [minimum requirement for an Ubuntu 22.04](https://help.ubuntu.com/community/Installation/SystemRequirements) installation is 25GB (25600MB). If you can spare more space, go for it;
+
+### Windows Drive Encryption
+
+Windows should turn *Device Encryption* on by default.
+
+You should still check though!
+
+Open **Settings > Privacy & Security** and make sure *Device Encryption* is on.
+
+## Before Starting
+
+* download the Ubuntu 22.04 ISO from [Ubuntu's website](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64);
+* flash the downloaded ISO to a USB stick. There are multiple ways of doing that. For example, you could use [rufus](https://rufus.ie/en/);
+* boot your computer from the flashed USB stick;
+* follow **Phase 3: Partition the drive for Ubuntu** and **Phase 4: Install Ubuntu** from [this tutorial](https://www.mikekasberg.com/blog/2020/04/08/dual-boot-ubuntu-and-windows-with-encryption.html). The tutorial was written for a Windows 10 and Ubuntu 20.04 dual-boot but works great for a Windows 11 and Ubuntu 22.04 dual-boot;
+* once this is all done, reboot the computer;
+* you will be greeted by **GRUB**, select *Ubuntu*;
+* that's it! You can now follow the instructions in the [Getting Started](#Getting-Started) section (dont forget the [After Running The Script](#After-Running-The-Script) section!);
 
 ## Notes
 
