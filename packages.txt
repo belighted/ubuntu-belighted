@@ -30,3 +30,4 @@ tk-dev
 libxmlsec1-dev
 liblzma-dev
 libcurl4-openssl-dev
+inotify-tools
