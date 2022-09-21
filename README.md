@@ -115,6 +115,8 @@ ssh-keygen -q -t rsa -b 4096 -C "$SSH_EMAIL"
 
 * A computer running Windows 11;
 
+**NOTE: to bypass the internet connection from the Windows 11 OOBE (Out Of the Box Experience), follow the steps 19 and 20 from [this guide](https://pureinfotech.com/bypass-internet-connection-install-windows-11/).**
+
 ### Preparing Windows for Ubuntu
 
 Open the Disk Management utility by pressing **[WinKey]+[R]** and typing *diskmgmt.msc* in the dialog box. Hit **[Enter]** to continue.
