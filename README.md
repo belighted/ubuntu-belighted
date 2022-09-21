@@ -127,11 +127,17 @@ Within the Disk Management window, shrink your Windows Volume to create an empty
 
 ### Windows Drive Encryption
 
-Windows should turn *Device Encryption* on by default.
+1) Device Encryption
 
-You should still check though!
+To check if your computer supports *Device Encryption*, open **Settings > Privacy & Security**. If your computer support that feature, you should see a tab called *Device Encryption*. By default, Windows 11 should turn the feature on.
 
-Open **Settings > Privacy & Security** and make sure *Device Encryption* is on.
+**NOTE: the recovery key is linked to the microsoft account associated with the user. You MUST therefore have linked Windows 11 to your Microsoft Account !**
+
+2) BitLocker
+
+If *Device Encryption* is unavailable on your computer, turn on [BitLocker](https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview).
+
+**NOTE: you MUST save the recovery key somewhere safe and not on your computer**
 
 ## Before Starting
 
