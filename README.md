@@ -115,6 +115,8 @@ ssh-keygen -q -t rsa -b 4096 -C "$SSH_EMAIL"
 
 * A computer running Windows 11;
 
+**NOTE: to bypass the internet connection from the Windows 11 OOBE (Out Of the Box Experience), follow the steps 19 and 20 from [this guide](https://pureinfotech.com/bypass-internet-connection-install-windows-11/).**
+
 ### Preparing Windows for Ubuntu
 
 Open the Disk Management utility by pressing **[WinKey]+[R]** and typing *diskmgmt.msc* in the dialog box. Hit **[Enter]** to continue.
@@ -125,11 +127,17 @@ Within the Disk Management window, shrink your Windows Volume to create an empty
 
 ### Windows Drive Encryption
 
-Windows should turn *Device Encryption* on by default.
+1) Device Encryption
 
-You should still check though!
+To check if your computer supports *Device Encryption*, open **Settings > Privacy & Security**. If your computer support that feature, you should see a tab called *Device Encryption*. By default, Windows 11 should turn the feature on.
 
-Open **Settings > Privacy & Security** and make sure *Device Encryption* is on.
+**NOTE: the recovery key is linked to the microsoft account associated with the user. You MUST therefore have linked Windows 11 to your Microsoft Account !**
+
+2) BitLocker
+
+If *Device Encryption* is unavailable on your computer, turn on [BitLocker](https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview).
+
+**NOTE: you MUST save the recovery key somewhere safe and not on your computer**
 
 ## Before Starting
 
