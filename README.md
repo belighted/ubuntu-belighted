@@ -16,7 +16,7 @@ This folder contains installation scripts for setting up an Ubuntu 22.04 Linux m
 
 ## Getting Started
 
-**If your goal is to dual-boot Linux (Ubuntu 22.04) and Windows (11), refer to the [Dual-Boot - Ubuntu 22.04 with Windows 11](#Dual-Boot-Ubuntu-22.04-with-Windows-11) section.**
+**If your goal is to dual-boot Linux (Ubuntu 22.04) and Windows (11), refer to the [Dual-Boot - Ubuntu 22.04 with Windows 11](#dual-boot---ubuntu-2204-with-windows-11) section.**
 
 Open a terminal and run the following command:
 
