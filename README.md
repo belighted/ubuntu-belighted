@@ -125,6 +125,18 @@ Within the Disk Management window, shrink your Windows Volume to create an empty
 * right click on the volume, select *Shrink Volume...*;
 * *enter the amount of space to shrink in MB*. The [minimum requirement for an Ubuntu 22.04](https://help.ubuntu.com/community/Installation/SystemRequirements) installation is 25GB (25600MB). If you can spare more space, go for it;
 
+**NOTE: if you would like to resize your Windows 11 partition down to less than half its original size, the above mentioned instruction will not work. INstead, follow:**
+* **make sure neither BitLocker nor Device Encryption is turned on on your computer**;
+* * **if Device Encryption is turned on, simply turn it off from Settings > Privacy & Security**;
+* * **if BitLocker is turned on, execute these commands from within Powershell in "Admin mode":**
+```powershell
+manag-bde --status # this command only prints status information about your device encryption
+Disable-Bitlocker -MountPoint "C:"
+manage-bde -off C:
+```
+* **download and install [AOMEI Partition Assistant](https://www.diskpart.com/download.html)**;
+* **resize the windows partition using AOMEI Partition Assistant**;
+
 ### Windows Drive Encryption
 
 1) Device Encryption
