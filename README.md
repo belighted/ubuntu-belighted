@@ -131,11 +131,13 @@ Within the Disk Management window, shrink your Windows Volume to create an empty
 
 To check if your computer supports *Device Encryption*, open **Settings > Privacy & Security**. If your computer support that feature, you should see a tab called *Device Encryption*. By default, Windows 11 should turn the feature on.
 
-**NOTE: the recovery key is linked to the microsoft account associated with the user. You MUST therefore have linked Windows 11 to your Microsoft Account !**
+**NOTE: when the Device Encryption is over, you should check and save the recovery key somewhere safe:**
+* **If you linked your user account to your Microsoft Account: the recovery key can be obtained through [this Microsoft link](https://go.redirectingat.com/?id=111346X1569483&url=https://account.microsoft.com/devices/recoverykey&xcust=2-1-624599-1-0-0&sref=https://www.pcworld.com/article/624599/how-to-find-the-recovery-key-for-your-encrypted-windows-11-pc.html)**
+* **Otherwise, go to Settings > Privacy & Security >  and click on "Get recovery key"**
 
 2) BitLocker
 
-If *Device Encryption* is unavailable on your computer, turn on [BitLocker](https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview).
+If *Device Encryption* is unavailable on your computer, turn on [BitLocker](https://support.microsoft.com/en-us/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838) (see the bottom of the page).
 
 **NOTE: you MUST save the recovery key somewhere safe and not on your computer**
 
