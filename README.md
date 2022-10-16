@@ -72,7 +72,8 @@ This will:
 |   libfuse2    |   Filesystem in Userspace (library)     |
 |   Visual Studio Code  |   VS Code is a source-code editor made by Microsoft   |
 |   docker (& friends)  |   Pack, ship and run any application as a lightweight container   |
-|   Slack       |   Slack is a messaging program designed specifically for the office   |
+|   snapd       |   Daemon and tooling that enable snap packages   |
+|   Slack (snap)|   Slack is a messaging program designed specifically for the office   |
 
 
 ### After Running The Script

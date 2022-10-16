@@ -2,7 +2,6 @@
 # VARIABLES
 ## URLS FOR .DEB PACKAGES
 CODE_DEB="https://az764295.vo.msecnd.net/stable/784b0177c56c607789f9638da7b6bf3230d47a8c/code_1.71.0-1662018389_amd64.deb"
-SLACK_DEB="https://downloads.slack-edge.com/releases/linux/4.28.171/prod/x64/slack-desktop-4.28.171-amd64.deb"
 
 # INSTALL ESSENTIAL APPLICATIONS
 ## PACKAGES
@@ -25,8 +24,7 @@ sudo systemctl enable containerd.service
 sudo systemctl start docker.service
 sudo systemctl start containerd.service
 ## SLACK
-wget $SLACK_DEB -O ./.deb/slack.deb
-sudo apt install ./.deb/slack.deb
+sudo snap install slack
 ## OFFICE PRINTER
 mkdir ./.tar
 wget https://download.brother.com/welcome/dlf006893/linux-brprinter-installer-2.2.3-1.gz -O ./.tar/printer.gz
