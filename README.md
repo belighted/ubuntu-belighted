@@ -125,7 +125,7 @@ Within the Disk Management window, shrink your Windows Volume to create an empty
 * right click on the volume, select *Shrink Volume...*;
 * *enter the amount of space to shrink in MB*. The [minimum requirement for an Ubuntu 22.04](https://help.ubuntu.com/community/Installation/SystemRequirements) installation is 25GB (25600MB). If you can spare more space, go for it;
 
-**NOTE: if you would like to resize your Windows 11 partition down to less than half its original size, the above mentioned instruction will not work. INstead, follow:**
+**NOTE: if you would like to resize your Windows 11 partition down to less than half its original size, the above mentioned instruction will not work. Instead, follow:**
 * **make sure neither BitLocker nor Device Encryption is turned on on your computer**;
 * * **if Device Encryption is turned on, simply turn it off from Settings > Privacy & Security**;
 * * **if BitLocker is turned on, execute these commands from within Powershell in "Admin mode":**
@@ -144,8 +144,8 @@ manage-bde -off C:
 To check if your computer supports *Device Encryption*, open **Settings > Privacy & Security**. If your computer support that feature, you should see a tab called *Device Encryption*. By default, Windows 11 should turn the feature on.
 
 **NOTE: when the Device Encryption is over, you should check and save the recovery key somewhere safe:**
-* **If you linked your user account to your Microsoft Account: the recovery key can be obtained through [this Microsoft link](https://go.redirectingat.com/?id=111346X1569483&url=https://account.microsoft.com/devices/recoverykey&xcust=2-1-624599-1-0-0&sref=https://www.pcworld.com/article/624599/how-to-find-the-recovery-key-for-your-encrypted-windows-11-pc.html)**
-* **Otherwise, go to Settings > Privacy & Security >  and click on "Get recovery key"**
+* **If you linked your user account to your Microsoft Account: the recovery key can be obtained through [this Microsoft link](https://account.microsoft.com/devices/recoverykey)**
+* **Otherwise, go to `Settings > Privacy & Security > Device Encryption` and click on "Manage my BitLocker parameters and then on "Save my recovery key"**
 
 2) BitLocker
 
