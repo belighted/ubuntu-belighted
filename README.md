@@ -72,7 +72,8 @@ This will:
 |   libfuse2    |   Filesystem in Userspace (library)     |
 |   Visual Studio Code  |   VS Code is a source-code editor made by Microsoft   |
 |   docker (& friends)  |   Pack, ship and run any application as a lightweight container   |
-|   Slack       |   Slack is a messaging program designed specifically for the office   |
+|   snapd       |   Daemon and tooling that enable snap packages   |
+|   Slack (snap)|   Slack is a messaging program designed specifically for the office   |
 
 
 ### After Running The Script
@@ -172,3 +173,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Change log
 
 Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
+
+## Notes
+
+### Slack
+
+If you used this script before slack was installed through snap, you might have noticed a few GPG related warnings after running ```sudo apt update```. To remove them and install slack using snap:
+
+* run "sudo apt-key list" and find the problematic keys. This should not be too difficult since this command should not list more thant a few keys. Once you found the keys, look at their "pub" entry. Note the 8 last characters for each problematic key. All key entries look something like this:
+
+```bash
+------------------------------------
+pub   rsa2048 2015-10-28 [SC]
+      BC52 8686 B50D 79E3 39D3  721C EB3E 94AD BE12 29CF
+uid           [ unknown] Microsoft (Release signing) <gpgsecurity@microsoft.com>
+
+## In this example, the number you are looking for is BE1229CF
+```
+
+* run the following command for each problematic key:
+
+```bash
+sudo apt-key del $NUMBER_YOU_GOT_FROM_PREVIOUS_STEP
+```
+
+* run the following command to remove the ```slack.list``` file from the apt sources:
+
+```bash
+sudo rm -f /etc/apt/sources.list.d/slack.list
+```
+
+* run the following command to completely uninstall the slack version you initially installed while running this script:
+
+```bash
+sudo apt purge slack-desktop -y
+```
+
+* if snaps are not yet ava`ilable on your machine:
+
+```bash
+sudo apt update
+sudo apt install snapd
+```
+
+* finaly, install slack as a snap:
+
+```bash
+sudo snap install slack
+```
