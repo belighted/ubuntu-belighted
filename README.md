@@ -15,8 +15,9 @@ See [Ubuntu's website](https://ubuntu.com/) for more information on Ubuntu.
     * [Shrink Windows partition](#shrink-windows-partition)
     * [Windows Drive Encryption](#windows-drive-encryption)
   * [Installing Ubuntu](#installing-ubuntu)
-* [Change log](#change-log)
 * [Notes](#notes)
+* [Change log](#change-log)
+* [Known Issues](#known-issues)
   * [Slack](#slack)
 <!-- TOC -->
 
@@ -25,6 +26,8 @@ See [Ubuntu's website](https://ubuntu.com/) for more information on Ubuntu.
 This repository includes an installation script to set up Ubuntu 22.04 Linux for developers at Belighted.
 
 This document describes the procedure followed whenever a new laptop is configured at Belighted.
+
+For know issues with this repository, refer to the [Known Issues](#known-issues) section.
 
 ## Before Starting
 
@@ -221,15 +224,17 @@ see the bottom of the page).
 * that's it! You can now follow the instructions in the [Getting Started](#Getting-Started) section (dont forget
   the [After Running The Script](#After-Running-The-Script) section!);
 
-## Change log
-
-Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
-
 ## Notes
 
 * The commit format is based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 * The change log format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Change log
+
+Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
+
+## Known Issues
 
 ### Slack
 
