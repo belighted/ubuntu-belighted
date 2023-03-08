@@ -15,15 +15,16 @@ See [Ubuntu's website](https://ubuntu.com/) for more information on Ubuntu.
     * [Shrink Windows partition](#shrink-windows-partition)
     * [Windows Drive Encryption](#windows-drive-encryption)
   * [Installing Ubuntu](#installing-ubuntu)
-* [Notes](#notes)
 * [Change log](#change-log)
-* [Notes](#notes-1)
+* [Notes](#notes)
   * [Slack](#slack)
 <!-- TOC -->
 
 ## Overview
 
 This repository includes an installation script to set up Ubuntu 22.04 Linux for developers at Belighted.
+
+This document describes the procedure followed whenever a new laptop is configured at Belighted.
 
 ## Before Starting
 
@@ -88,15 +89,18 @@ This will:
 | libdb-dev            | Berkeley Database Libraries (development)                         |
 | uuid-dev             | Universally Unique ID library - headers and static libraries      |
 | tmux                 | terminal multiplexer                                              |
+| libfuse2             | Filesystem in Userspace (library)                                 |
 | llvm                 | Low-Level Virtual Machine (LLVM)                                  |
 | xz-utils             | XZ-format compression utilities                                   |
+| tk-dev               | Toolkit for Tcl and X11                                           |
 | libxmlsec1-dev       | Development files for the XML security library                    |
 | liblzma-dev          | XZ-format compression library - development files                 |
 | libcurl4-openssl-dev | development files and documentation for libcurl (OpenSSL flavour) |
-| libfuse2             | Filesystem in Userspace (library)                                 |
+| inotify-tools        | command-line programs providing a simple interface to inotify     |
+| snapd                | Daemon and tooling that enable snap packages                      |
+| linux-headers-...    | Linux kernel headers for version defined by output of $(uname -r) |
 | Visual Studio Code   | VS Code is a source-code editor made by Microsoft                 |
 | docker (& friends)   | Pack, ship and run any application as a lightweight container     |
-| snapd                | Daemon and tooling that enable snap packages                      |
 | Slack (snap)         | Slack is a messaging program designed specifically for the office |
 
 ### After Running The Script
@@ -163,9 +167,7 @@ Within the Disk Management window, shrink your Windows Volume to create an empty
 mentioned instruction will not work. Instead, follow:**
 
 * **make sure neither BitLocker nor Device Encryption is turned on on your computer**;
-*
     * **if Device Encryption is turned on, simply turn it off from Settings > Privacy & Security**;
-*
     * **if BitLocker is turned on, execute these commands from within Powershell in "Admin mode":**
 
 ```powershell
@@ -219,17 +221,15 @@ see the bottom of the page).
 * that's it! You can now follow the instructions in the [Getting Started](#Getting-Started) section (dont forget
   the [After Running The Script](#After-Running-The-Script) section!);
 
-## Notes
-
-* The commit format is based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
-* The change log format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-  and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 ## Change log
 
 Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
 
 ## Notes
+
+* The commit format is based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+* The change log format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+  and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Slack
 
