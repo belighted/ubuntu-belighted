@@ -23,7 +23,7 @@ See [Ubuntu's website](https://ubuntu.com/) for more information on Ubuntu.
 
 ## Overview
 
-This doc includes an installation script to set up Ubuntu 22.04 Linux for developers at Belighted.
+This repository includes an installation script to set up Ubuntu 22.04 Linux for developers at Belighted.
 
 ## Before Starting
 
