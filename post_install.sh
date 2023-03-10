@@ -26,6 +26,11 @@ asdf plugin-add postgres
 asdf install postgres latest
 asdf global postgres latest
 
+# LAST UPGRADE
+sudo apt update -qq
+sudo apt autoremove -y -qq
+sudo apt upgrade -y -qq
+
 # FILE CLEAN UP
 rm -rf .deb .tar .extensions
 sudo rm -f brscan*.deb
