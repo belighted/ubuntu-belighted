@@ -27,7 +27,7 @@ This repository includes an installation script to set up Ubuntu 22.04 Linux for
 
 This document describes the procedure followed whenever a new laptop is configured at Belighted.
 
-For know issues with this repository, refer to the [Known Issues](#known-issues) section.
+For known issues with this repository, refer to the [Known Issues](#known-issues) section.
 
 ## Before Starting
 
@@ -101,9 +101,10 @@ This will:
 | libcurl4-openssl-dev | development files and documentation for libcurl (OpenSSL flavour) |
 | inotify-tools        | command-line programs providing a simple interface to inotify     |
 | snapd                | Daemon and tooling that enable snap packages                      |
+| docker.io            | Linux container runtime                                           |
 | linux-headers-...    | Linux kernel headers for version defined by output of $(uname -r) |
-| Visual Studio Code   | VS Code is a source-code editor made by Microsoft                 |
-| docker (& friends)   | Pack, ship and run any application as a lightweight container     |
+| code (snap)          | VS Code is a source-code editor made by Microsoft                 |
+| docker (snap)        | Pack, ship and run any application as a lightweight container     |
 | Slack (snap)         | Slack is a messaging program designed specifically for the office |
 
 ### After Running The Script
@@ -174,7 +175,7 @@ mentioned instruction will not work. Instead, follow:**
     * **if BitLocker is turned on, execute these commands from within Powershell in "Admin mode":**
 
 ```powershell
-manag-bde --status # this command only prints status information about your device encryption
+manage-bde --status # this command only prints status information about your device encryption
 Disable-Bitlocker -MountPoint "C:"
 manage-bde -off C:
 ```
@@ -272,7 +273,7 @@ sudo rm -f /etc/apt/sources.list.d/slack.list
 sudo apt purge slack-desktop -y
 ```
 
-* if snaps are not yet ava`ilable on your machine:
+* if snaps are not yet available on your machine:
 
 ```bash
 sudo apt update
@@ -284,3 +285,9 @@ sudo apt install snapd
 ```bash
 sudo snap install slack
 ```
+
+### Docker
+
+This script now installs docker as a snap, which means there are a few caveats.
+
+Refer to the [docker-snap GitHub repository](https://github.com/docker-snap/docker-snap#usage) for specific information.
