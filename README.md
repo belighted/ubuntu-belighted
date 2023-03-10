@@ -304,9 +304,3 @@ sudo apt install snapd
 ```bash
 sudo snap install slack
 ```
-
-### Docker
-
-This script now installs docker as a snap, which means there are a few caveats.
-
-Refer to the [docker-snap GitHub repository](https://github.com/docker-snap/docker-snap#usage) for specific information.
