@@ -101,10 +101,9 @@ This will:
 | libcurl4-openssl-dev | development files and documentation for libcurl (OpenSSL flavour) |
 | inotify-tools        | command-line programs providing a simple interface to inotify     |
 | snapd                | Daemon and tooling that enable snap packages                      |
-| docker.io            | Linux container runtime                                           |
 | linux-headers-...    | Linux kernel headers for version defined by output of $(uname -r) |
+| docker (& friends)   | Pack, ship and run any application as a lightweight container     |
 | code (snap)          | VS Code is a source-code editor made by Microsoft                 |
-| docker (snap)        | Pack, ship and run any application as a lightweight container     |
 | Slack (snap)         | Slack is a messaging program designed specifically for the office |
 
 ### After Running The Script

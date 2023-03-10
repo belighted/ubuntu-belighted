@@ -32,4 +32,3 @@ liblzma-dev
 libcurl4-openssl-dev
 inotify-tools
 snapd
-docker.io
