@@ -214,7 +214,7 @@ see the bottom of the page).
 * follow **Phase 3: Partition the drive for Ubuntu** and **Phase 4: Install Ubuntu**
   from [this tutorial](https://www.mikekasberg.com/blog/2020/04/08/dual-boot-ubuntu-and-windows-with-encryption.html).
   The tutorial was written for a Windows 10 and Ubuntu 20.04 dual-boot but works great for a Windows 11 and Ubuntu 22.04
-  dual-boot;
+  dual-boot.
   
   Careful that in the provided commands you may need to replace `sda` by `nvme0n1`, [depending on your hardware](https://askubuntu.com/questions/932331/filesystem-shows-dev-nvme0n1p1-instead-of-dev-sda). If this is the case for you, follow [this link](https://www.mikekasberg.com/blog/2020/04/08/dual-boot-ubuntu-and-windows-with-encryption.html#partition-names) instead and specify your device name. This will update the commands listed in the tutorial to match your specification.
   
