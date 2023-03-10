@@ -236,6 +236,26 @@ Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted
 
 ## Known Issues
 
+### Upgrade from Ubuntu 20.04 to Ubuntu 22.04
+
+When trying to upgrade Ubuntu from version 20.04 to version 22.04 with the ```Software Updater``` 
+(or the command ```sudo do-release-upgrade```), the process might fail because of broken packages.
+
+While testing, the following lines could be read from ```/var/log/dist-upgrade/main.log``` after trying
+the process:
+```log
+2023-03-10 11:43:16,148 WARNING Can't mark 'ubuntu-desktop' for upgrade (E:Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.)
+2023-03-10 11:43:16,396 ERROR Dist-upgrade failed: 'Broken packages after upgrade: gir1.2-gweather-3.0, gnome-control-center, gnome-shell, libgirepository-1.0-1, ubuntu-desktop'
+```
+
+The following [fix](https://github.com/pop-os/gnome-control-center/issues/133) was shared on GitHub by a user:
+```bash
+sudo apt install libpython3.8-minimal=3.8.2-1ubuntu1 libpython3.8-stdlib=3.8.2-1ubuntu1 python3.8-minimal=3.8.2-1ubuntu1 python3.8=3.8.2-1ubuntu1
+sudo apt install gnome-control-center
+```
+
+This fix is successful on the tested hardware and I could execute ```sudo do-release-upgrade``` afterwards.
+
 ### Slack
 
 If you used this script before slack was installed through snap, you might have noticed a few GPG related warnings after
