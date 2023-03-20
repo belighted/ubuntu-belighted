@@ -1,0 +1,43 @@
+# GNOME EXTENSIONS
+GNOME_SHELL_EXTENSIONS="$HOME/.local/share/gnome-shell/extensions"
+USER_THEMES="user-theme@gnome-shell-extensions.gcampax.github.com"
+UT_URL="https://extensions.gnome.org/extension-data/user-themegnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip"
+REMOVABLE_DRIVE_MENU="drive-menu@gnome-shell-extensions.gcampax.github.com"
+RDM_URL="https://extensions.gnome.org/extension-data/drive-menugnome-shell-extensions.gcampax.github.com.v51.shell-extension.zip"
+CLIPBOARD_INDICATOR="clipboard-indicator@tudmotu.com"
+CI_URL="https://extensions.gnome.org/extension-data/clipboard-indicatortudmotu.com.v42.shell-extension.zip"
+CAFFEINE="caffeine@patapon.info"
+C_URL="https://extensions.gnome.org/extension-data/caffeinepatapon.info.v41.shell-extension.zip"
+PLACES_STATUS_INDICATOR="places-menu@gnome-shell-extensions.gcampax.github.com"
+PSI_URL="https://extensions.gnome.org/extension-data/places-menugnome-shell-extensions.gcampax.github.com.v54.shell-extension.zip"
+SOUND_INPUT_OUTPUT_DEVICE_CHOOSER="sound-output-device-chooser@kgshank.net"
+SIODC_URL="https://extensions.gnome.org/extension-data/sound-output-device-chooserkgshank.net.v43.shell-extension.zip"
+TRAY_ICONS_RELOADED="trayIconsReloaded@selfmade.pl"
+TIR_URL="https://extensions.gnome.org/extension-data/trayIconsReloadedselfmade.pl.v25.shell-extension.zip"
+VITALS="Vitals@CoreCoding.com"
+V_URL="https://extensions.gnome.org/extension-data/VitalsCoreCoding.com.v57.shell-extension.zip"
+
+## URLS FOR .DEB PACKAGES
+CODE_DEB="https://az764295.vo.msecnd.net/stable/784b0177c56c607789f9638da7b6bf3230d47a8c/code_1.71.0-1662018389_amd64.deb"
+
+# DOCKER
+DOCKER_UBUNTU_ROOT_URL=https://download.docker.com/linux/ubuntu
+APT_KEYRING=/etc/apt/keyrings
+APT_SOURCE_LIST=/etc/apt/sources.list.d
+
+# OFFICE PRINTER
+OFFICE_PRINTER_INSTALLER_URL=https://download.brother.com/welcome/dlf006893/linux-brprinter-installer-2.2.3-1.gz
+
+# OH MY ZSH
+OHMYZSH_INSTALL_SCRIPT=https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+ZSH_AUTOSUGGESTIONS_GIT=https://github.com/zsh-users/zsh-autosuggestions
+ZSH_SYNTAX_HIGHLIGHTING_GIT=https://github.com/zsh-users/zsh-syntax-highlighting.git
+ASDF_GIT=https://github.com/asdf-vm/asdf.git
+POWERLEVEL10K_GIT=https://github.com/romkatv/powerlevel10k.git
+USER_FONT_PATH=$HOME/.local/share/fonts
+MESLO_LGS_NF_REGULAR_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+MESLO_LGS_NF_BOLD_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+MESLO_LGS_NF_ITALIC_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+MESLO_LGS_NF_BOLD_ITALIC_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+ASDF_NODEJS_GIT=https://github.com/asdf-vm/asdf-nodejs.git
+ASDF_RUBY_GIT=https://github.com/asdf-vm/asdf-ruby.git

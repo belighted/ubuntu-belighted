@@ -47,7 +47,7 @@ the [Dual-Boot - Ubuntu 22.04 with Windows 11](#dual-boot---ubuntu-2204-with-win
 Open a terminal and run the following command:
 
 ```bash
-wget https://github.com/belighted/ubuntu-belighted/raw/main/install.sh -O /home/$(whoami)/Downloads/install.sh && chmod +x /home/$(whoami)/Downloads/install.sh && bash /home/$(whoami)/Downloads/install.sh
+wget https://github.com/belighted/ubuntu-belighted/raw/main/install.sh -O $HOME/Downloads/install.sh && chmod +x $HOME/Downloads/install.sh && bash $HOME/Downloads/install.sh
 ```
 
 This will:
