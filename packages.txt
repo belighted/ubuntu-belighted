@@ -32,3 +32,10 @@ liblzma-dev
 libcurl4-openssl-dev
 inotify-tools
 snapd
+bridge-utils 
+cpu-checker
+libvirt-clients 
+libvirt-daemon 
+qemu 
+qemu-kvm
+virt-manager
