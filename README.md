@@ -101,6 +101,13 @@ This will:
 | libcurl4-openssl-dev | development files and documentation for libcurl (OpenSSL flavour) |
 | inotify-tools        | command-line programs providing a simple interface to inotify     |
 | snapd                | Daemon and tooling that enable snap packages                      |
+| bridge-utils         | Utilities for configuring the Linux Ethernet bridge               |
+| cpu-checker          | tools to help evaluate certain CPU (or BIOS) features             |
+| libvirt-clients      | Programs for the libvirt library                                  |
+| libvirt-daemon       | Virtualization daemon                                             |
+| qemu                 | fast processor emulator, dummy package                            |
+| qemu-kvm             | Virtual package: QEMU full system emulation binaries              |
+| virt-manager         | desktop application for managing virtual machines                 |
 | linux-headers-...    | Linux kernel headers for version defined by output of $(uname -r) |
 | Visual Studio Code   | VS Code is a source-code editor made by Microsoft                 |
 | docker (& friends)   | Pack, ship and run any application as a lightweight container     |
