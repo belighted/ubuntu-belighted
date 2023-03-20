@@ -4,5 +4,5 @@ sudo apt install git -y -qq
 mkdir $HOME/.scripts
 git clone https://github.com/belighted/ubuntu-belighted.git $HOME/.scripts/ubuntu-belighted
 cd $HOME/.scripts/ubuntu-belighted
-./main.sh
+bash main.sh
 rm -f $HOME/Downloads/install.sh

@@ -112,7 +112,7 @@ After the script finished executing, you will need to reboot. Do it before conti
 
 Once you logged back in, open a terminal. You will be prompted to configure the powerlevel10k oh-my-zsh theme.
 
-**NOTE: during the execution of the ./install.sh script, the MesloLGS NF fonts were installed on your system.
+**NOTE: during the execution of the install.sh script, the MesloLGS NF fonts were installed on your system.
 powerlevel10k recommends using them.**
 
 **on the gnome terminal, open the settings and select your profile. Under the "Text" section, check the "Custom font"

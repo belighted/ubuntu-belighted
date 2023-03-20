@@ -7,9 +7,9 @@ source variables
 sudo xargs -a packages.txt -r apt install -y -qq # install the packages listed on the packages.txt file
 sudo apt install linux-headers-$(uname -r) -y -qq
 ## VSCODE
-mkdir ./.deb
-wget $CODE_DEB -O ./.deb/code.deb
-sudo apt install ./.deb/code.deb -y -qq
+mkdir .deb
+wget $CODE_DEB -O .deb/code.deb
+sudo apt install .deb/code.deb -y -qq
 ## DOCKER
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL $DOCKER_UBUNTU_ROOT_URL/gpg | sudo gpg --dearmor -o $APT_KEYRING/docker.gpg
@@ -25,8 +25,8 @@ sudo systemctl start containerd.service
 ## SLACK
 sudo snap install slack
 ## OFFICE PRINTER
-mkdir ./.tar
-wget $OFFICE_PRINTER_INSTALLER_URL -O ./.tar/printer.gz
-gunzip -c ./.tar/printer.gz > ./.tar/printer
-sudo bash ./.tar/printer DCP-9270CDN
+mkdir .tar
+wget $OFFICE_PRINTER_INSTALLER_URL -O .tar/printer.gz
+gunzip -c .tar/printer.gz > .tar/printer
+sudo bash .tar/printer DCP-9270CDN
 
