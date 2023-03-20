@@ -1,7 +1,4 @@
 #!/bin/bash
-# CONFIGURE SUSPEND-THEN-HIBERNATE
-echo "HandleLidSwitch=suspend-then-hibernate" >> /etc/systemd/logind.conf
-cp ./sleep.conf /etc/systemd/sleepd.conf
 
 # INSTALL ESSENTIAL PACKAGES
 bash install_packages.sh
@@ -11,3 +8,6 @@ bash install_zsh.sh
 
 # DESKTOP CUSTOMIZATION
 bash desktop_customization.sh
+
+# CONFIGURE SUSPEND-THEN-HIBERNATE
+bash suspend_then_hibernate.sh
