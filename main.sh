@@ -8,6 +8,3 @@ bash install_zsh.sh
 
 # DESKTOP CUSTOMIZATION
 bash desktop_customization.sh
-
-# CONFIGURE SUSPEND-THEN-HIBERNATE
-bash suspend_then_hibernate.sh

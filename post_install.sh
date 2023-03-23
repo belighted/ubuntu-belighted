@@ -26,6 +26,17 @@ asdf plugin-add postgres
 asdf install postgres latest
 asdf global postgres latest
 
+# SUSPEND THEN HIBERNATE
+sudo bash -c "echo $HANDLE_LID_SWITCH >> $LOGIND_CONF_PATH"
+sudo bash -c "echo $HANDLE_LID_SWITCH_DOCKED >> $LOGIND_CONF_PATH"
+sudo sed -i "s/\($TARGET_KEY *= *\).*/\1$REPLACEMENT_VALUE/" $UPOWER_CONF_FILE
+if test -f $SLEEP_CONF_PATH; then
+    sudo bash -c "echo $HIBERNATE_DELAY_SEC >> $SLEEP_CONF_PATH"
+else
+    sudo cp sleep.conf $SLEEP_CONF_PATH
+fi
+gsettings set $GNOME_POWER_SETTINGS $SUSPEND_WITH_EXT_MONITOR
+
 # FILE CLEAN UP
 rm -rf .deb .tar .extensions
 sudo rm -f brscan*.deb
