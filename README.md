@@ -15,6 +15,8 @@ See [Ubuntu's website](https://ubuntu.com/) for more information on Ubuntu.
     * [Shrink Windows partition](#shrink-windows-partition)
     * [Windows Drive Encryption](#windows-drive-encryption)
   * [Installing Ubuntu](#installing-ubuntu)
+* [Optional Scripts](#optional-scripts)
+  * [Install and Enable KVM](#install-and-enable-kvm)
 * [Notes](#notes)
 * [Change log](#change-log)
 * [Known Issues](#known-issues)
@@ -230,6 +232,10 @@ see the bottom of the page).
 * you will be greeted by **GRUB**, select *Ubuntu*;
 * that's it! You can now follow the instructions in the [Getting Started](#Getting-Started) section (dont forget
   the [After Running The Script](#After-Running-The-Script) section!);
+
+## Optional Scripts
+
+### Install and Enable KVM
 
 ## Notes
 
