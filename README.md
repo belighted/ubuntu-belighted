@@ -15,6 +15,8 @@ See [Ubuntu's website](https://ubuntu.com/) for more information on Ubuntu.
     * [Shrink Windows partition](#shrink-windows-partition)
     * [Windows Drive Encryption](#windows-drive-encryption)
   * [Installing Ubuntu](#installing-ubuntu)
+* [Optional Scripts](#optional-scripts)
+  * [Install and Enable KVM](#install-and-enable-kvm)
 * [Notes](#notes)
 * [Change log](#change-log)
 * [Known Issues](#known-issues)
@@ -223,6 +225,24 @@ see the bottom of the page).
 * you will be greeted by **GRUB**, select *Ubuntu*;
 * that's it! You can now follow the instructions in the [Getting Started](#Getting-Started) section (dont forget
   the [After Running The Script](#After-Running-The-Script) section!);
+
+## Optional Scripts
+
+### Install and Enable KVM
+
+To install and enable [KVM](https://www.linux-kvm.org/page/Main_Page) on your linux computer, execute the script ```install_and_enable_kvm.sh``` in the root of this project's directory.
+
+This will install the following additionnal packages:
+
+| Package              | description                                                       |
+|----------------------|-------------------------------------------------------------------|
+| bridge-utils         | Utilities for configuring the Linux Ethernet bridge               |
+| cpu-checker          | tools to help evaluate certain CPU (or BIOS) features             |
+| libvirt-clients      | Programs for the libvirt library                                  |
+| libvirt-daemon       | Virtualization daemon                                             |
+| qemu                 | fast processor emulator, dummy package                            |
+| qemu-kvm             | Virtual package: QEMU full system emulation binaries              |
+| virt-manager         | desktop application for managing virtual machines                 |
 
 ## Notes
 

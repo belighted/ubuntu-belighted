@@ -1,0 +1,7 @@
+bridge-utils 
+cpu-checker
+libvirt-clients 
+libvirt-daemon 
+qemu 
+qemu-kvm
+virt-manager
