@@ -24,6 +24,8 @@ CODE_DEB="https://az764295.vo.msecnd.net/stable/784b0177c56c607789f9638da7b6bf32
 DOCKER_UBUNTU_ROOT_URL=https://download.docker.com/linux/ubuntu
 APT_KEYRING=/etc/apt/keyrings
 APT_SOURCE_LIST=/etc/apt/sources.list.d
+DOCKER_STORAGE=/var/lib/docker
+CONTAINERD_STORAGE=/var/lib/containerd
 
 # OFFICE PRINTER
 OFFICE_PRINTER_INSTALLER_URL=https://download.brother.com/welcome/dlf006893/linux-brprinter-installer-2.2.3-1.gz

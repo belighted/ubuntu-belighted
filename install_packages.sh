@@ -8,13 +8,13 @@ sudo xargs -a packages.txt -r apt install -y -qq # install the packages listed o
 sudo apt install linux-headers-$(uname -r) -y -qq
 ## DOCKER
 sudo apt remove docker docker.io containerd runc
-sudo rm -rf /var/lib/docker
-sudo rm -rf /var/lib/containerd
-sudo mkdir -m 0755 -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo rm -rf $DOCKER_STORAGE
+sudo rm -rf $CONTAINERD_STORAGE
+sudo mkdir -m 0755 -p $APT_KEYRING
+curl -fsSL $DOCKER_UBUNTU_ROOT_URL/gpg | sudo gpg --dearmor -o $APT_KEYRING/docker.gpg
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  "deb [arch=$(dpkg --print-architecture) signed-by=$APT_KEYRING/docker.gpg] $DOCKER_UBUNTU_ROOT_URL \
+  $(lsb_release -cs) stable" | sudo tee $APT_SOURCE_LIST/docker.list > /dev/null
 sudo apt update -qq && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y -qq
 sudo groupadd docker
 sudo usermod -aG docker $USER
