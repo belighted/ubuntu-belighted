@@ -1,7 +1,7 @@
 # CONFIGURATION
-alias aliases="vim ~/.oh-my-zsh/custom/aliases.zsh"
-alias rc="vim ~/.zshrc"
-alias src="source ~/.zshrc"
+alias aliases="vim $HOME/.oh-my-zsh/custom/aliases.zsh"
+alias rc="vim $HOME/.zshrc"
+alias src="source $HOME/.zshrc"
 
 # APT
 alias aptuu="sudo apt update && sudo apt upgrade"

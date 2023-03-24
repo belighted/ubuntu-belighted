@@ -1,23 +1,26 @@
 #!/bin/bash
+# VARIABLES
+source variables
+
 # SET ZSH AS DEFAULT SHELL
-sudo chsh -s $(which zsh) $(whoami)
+sudo chsh -s $(which zsh) $USER
 
 # OH MY ZSH
 ## INSTALL OH MY ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL $OHMYZSH_INSTALL_SCRIPT)" "" --unattended
 ## INSTALL PLUGINS
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone $ZSH_AUTOSUGGESTIONS_GIT ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone $ZSH_SYNTAX_HIGHLIGHTING_GIT ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ## INSTALL ASDF & NODE & RUBY & RAILS & PYTHON
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+git clone $ASDF_GIT $HOME/.asdf
 
 ## INSTALL POWERLEVEL10K
-mkdir -p ~/.local/share/fonts
-cp ./fonts/* ~/.local/share/fonts
+mkdir -p $HOME/.local/share/fonts
+cp ./fonts/* $HOME/.local/share/fonts
 fc-cache
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 $POWERLEVEL10K_GIT ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ## ZSHRC
-rm ~/.zshrc
-cp ./.zshrc ~/.zshrc
+rm $HOME/.zshrc
+cp ./.zshrc $HOME/.zshrc
 ## ALIASES
-cp ./aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+cp ./aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
