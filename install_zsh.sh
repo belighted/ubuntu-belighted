@@ -16,11 +16,11 @@ git clone $ASDF_GIT $HOME/.asdf
 
 ## INSTALL POWERLEVEL10K
 mkdir -p $HOME/.local/share/fonts
-cp ./fonts/* $HOME/.local/share/fonts
+cp fonts/* $HOME/.local/share/fonts
 fc-cache
 git clone --depth=1 $POWERLEVEL10K_GIT ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ## ZSHRC
 rm $HOME/.zshrc
-cp ./.zshrc $HOME/.zshrc
+cp .zshrc $HOME/.zshrc
 ## ALIASES
-cp ./aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
+cp aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
