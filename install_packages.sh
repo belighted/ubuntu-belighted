@@ -15,7 +15,8 @@ curl -fsSL $DOCKER_UBUNTU_ROOT_URL/gpg | sudo gpg --dearmor -o $APT_KEYRING/dock
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=$APT_KEYRING/docker.gpg] $DOCKER_UBUNTU_ROOT_URL \
   $(lsb_release -cs) stable" | sudo tee $APT_SOURCE_LIST/docker.list > /dev/null
-sudo apt update -qq && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y -qq
+sudo apt update -qq
+sudo xargs -a docker-packages.txt -r apt install -y -qq
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker.service
