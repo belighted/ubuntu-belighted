@@ -30,5 +30,5 @@ sudo snap install slack
 mkdir .tar
 wget $OFFICE_PRINTER_INSTALLER_URL -O .tar/printer.gz
 gunzip -c .tar/printer.gz > .tar/printer
-sudo bash .tar/printer DCP-9270CDN
+sudo bash .tar/printer $OFFICE_PRINTER_NAME
 
