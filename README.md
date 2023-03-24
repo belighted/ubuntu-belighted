@@ -27,7 +27,7 @@ This repository includes an installation script to set up Ubuntu 22.04 Linux for
 
 This document describes the procedure followed whenever a new laptop is configured at Belighted.
 
-For know issues with this repository, refer to the [Known Issues](#known-issues) section.
+For known issues with this repository, refer to the [Known Issues](#known-issues) section.
 
 ## Before Starting
 
@@ -102,8 +102,8 @@ This will:
 | inotify-tools        | command-line programs providing a simple interface to inotify     |
 | snapd                | Daemon and tooling that enable snap packages                      |
 | linux-headers-...    | Linux kernel headers for version defined by output of $(uname -r) |
-| Visual Studio Code   | VS Code is a source-code editor made by Microsoft                 |
 | docker (& friends)   | Pack, ship and run any application as a lightweight container     |
+| code (snap)          | VS Code is a source-code editor made by Microsoft                 |
 | Slack (snap)         | Slack is a messaging program designed specifically for the office |
 
 ### After Running The Script
@@ -174,7 +174,7 @@ mentioned instruction will not work. Instead, follow:**
     * **if BitLocker is turned on, execute these commands from within Powershell in "Admin mode":**
 
 ```powershell
-manag-bde --status # this command only prints status information about your device encryption
+manage-bde --status # this command only prints status information about your device encryption
 Disable-Bitlocker -MountPoint "C:"
 manage-bde -off C:
 ```
@@ -214,9 +214,9 @@ see the bottom of the page).
 * follow **Phase 3: Partition the drive for Ubuntu** and **Phase 4: Install Ubuntu**
   from [this tutorial](https://www.mikekasberg.com/blog/2020/04/08/dual-boot-ubuntu-and-windows-with-encryption.html).
   The tutorial was written for a Windows 10 and Ubuntu 20.04 dual-boot but works great for a Windows 11 and Ubuntu 22.04
-  dual-boot;
+  dual-boot.
   
-  Careful that in the provided commands you may need to replace `sda` by `nvme0n1`, [depending on your hardware](https://askubuntu.com/questions/932331/filesystem-shows-dev-nvme0n1p1-instead-of-dev-sda).
+  Careful that in the provided commands you may need to replace `sda` by `nvme0n1`, [depending on your hardware](https://askubuntu.com/questions/932331/filesystem-shows-dev-nvme0n1p1-instead-of-dev-sda). If this is the case for you, follow [this link](https://www.mikekasberg.com/blog/2020/04/08/dual-boot-ubuntu-and-windows-with-encryption.html#partition-names) instead and specify your device name. This will update the commands listed in the tutorial to match your specification.
   
   In case of need, ask Nicolas Daxhelet for support.
 * once this is all done, reboot the computer;
@@ -235,6 +235,26 @@ see the bottom of the page).
 Please refer to the [CHANGELOG.md](https://github.com/belighted/ubuntu-belighted/blob/main/CHANGELOG.md) file.
 
 ## Known Issues
+
+### Upgrade from Ubuntu 20.04 to Ubuntu 22.04
+
+When trying to upgrade Ubuntu from version 20.04 to version 22.04 with the ```Software Updater``` 
+(or the command ```sudo do-release-upgrade```), the process might fail because of broken packages.
+
+While testing, the following lines could be read from ```/var/log/dist-upgrade/main.log``` after trying
+the process:
+```log
+2023-03-10 11:43:16,148 WARNING Can't mark 'ubuntu-desktop' for upgrade (E:Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.)
+2023-03-10 11:43:16,396 ERROR Dist-upgrade failed: 'Broken packages after upgrade: gir1.2-gweather-3.0, gnome-control-center, gnome-shell, libgirepository-1.0-1, ubuntu-desktop'
+```
+
+The following [fix](https://github.com/pop-os/gnome-control-center/issues/133) was shared on GitHub by a user:
+```bash
+sudo apt install libpython3.8-minimal=3.8.2-1ubuntu1 libpython3.8-stdlib=3.8.2-1ubuntu1 python3.8-minimal=3.8.2-1ubuntu1 python3.8=3.8.2-1ubuntu1
+sudo apt install gnome-control-center
+```
+
+This fix is successful on the tested hardware and I could execute ```sudo do-release-upgrade``` afterwards.
 
 ### Slack
 
@@ -272,7 +292,7 @@ sudo rm -f /etc/apt/sources.list.d/slack.list
 sudo apt purge slack-desktop -y
 ```
 
-* if snaps are not yet ava`ilable on your machine:
+* if snaps are not yet available on your machine:
 
 ```bash
 sudo apt update

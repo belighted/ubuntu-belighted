@@ -26,8 +26,13 @@ asdf plugin-add postgres
 asdf install postgres latest
 asdf global postgres latest
 
+# LAST UPGRADE
+sudo apt update -qq
+sudo apt autoremove -y -qq
+sudo apt upgrade -y -qq
+
 # FILE CLEAN UP
-rm -rf .deb .tar .extensions
+rm -rf .tar .extensions
 sudo rm -f brscan*.deb
 sudo rm -f dcp9270cdn*.deb
 sudo rm -f uninstaller_*
