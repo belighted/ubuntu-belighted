@@ -41,3 +41,15 @@ MESLO_LGS_NF_ITALIC_URL=https://github.com/romkatv/powerlevel10k-media/raw/maste
 MESLO_LGS_NF_BOLD_ITALIC_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 ASDF_NODEJS_GIT=https://github.com/asdf-vm/asdf-nodejs.git
 ASDF_RUBY_GIT=https://github.com/asdf-vm/asdf-ruby.git
+
+# SUSPEND THEN HIBERNATE
+LOGIND_CONF_PATH=/etc/systemd/logind.conf
+SLEEP_CONF_PATH=/etc/systemd/sleep.conf
+UPOWER_CONF_FILE=/etc/UPower/UPower.conf
+HANDLE_LID_SWITCH="HandleLidSwitch=suspend-then-hibernate"
+HANDLE_LID_SWITCH_DOCKED="HandleLidSwitchDocked=suspend-then-hibernate"
+HIBERNATE_DELAY_SEC="HibernateDelaySec=3600"
+GNOME_POWER_SETTINGS=org.gnome.settings-daemon.plugins.power
+SUSPEND_WITH_EXT_MONITOR="lid-close-suspend-with-external-monitor true"
+TARGET_KEY=IgnoreLid
+REPLACEMENT_VALUE=true

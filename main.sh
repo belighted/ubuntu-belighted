@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # INSTALL ESSENTIAL PACKAGES
 bash install_packages.sh
 
